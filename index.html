@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>WingHo Tang @ IE student</title>
+	<meta name="description" content="tom's website">
+	<meta name="author" content="WingHo Tang">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- BootStrap -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	<article id="all" style='display:none;'>
+		<!-- Header -->
+		<header id="header" class="container" style="background-image:url('images/header_bg.jpeg'); background-size:cover; background-position:center">
+			<h1 class="display-1 text-light"> <small class="text-primary">I'm</small> <span>Tang Wing Ho</span></h1>
+			<h4 class="display-4 text-light">Information Engineering</h4>
+		</header>
+		<!-- NavBar -->
+		<nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light justify-content-center my-sm-3">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#movies">Movies</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#links">Links</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#rwd">Response Web</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-danger" data-toggle="collapse" href="#showSpecialFeat" role="button" aria-expanded="false" aria-controls="collapseExample">Special Features!</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- NavBar Special Feature -->
+		<nav class=" collapse navbar navbar-expand-lg navbar-light bg-light justify-content-center my-sm-3" id="showSpecialFeat">
+			<ul class="navbar-nav">
+				<li id="t1" class="m-3 nav-item">
+					<a class="nav-link btn btn-primary text-light" onclick="align()">Task1: Align</a>
+				</li>
+				<li id="t2" class="m-3 nav-item">
+					<a class="nav-link btn btn-success text-light" onclick="newHobby()">Task2: New Hobby</a>
+				</li>
+				<li id="t3" class="m-3 nav-item">
+					<a class="nav-link btn btn-warning text-light" onclick="scoll()">Task3: Scroll</a>
+				</li>
+				<li  class="m-3 nav-item">
+					<a id="t4" class="nav-link btn btn-danger text-light" onclick="bonus()">Task4: Bonus</a>
+				</li>
+				<li style="display: none;" id="loadSpinner" class="m-3 nav-item">
+					<a class="nav-link text-light">
+						<div class="spinner-border text-danger" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- Progress Bar -->
+		<div id="hideShow" style="display: none;" class="progress sticky-top">
+			<div class="progress-bar  bg-warning progress-bar-striped progress-bar-animated" id="scrollBar"></div>
+		</div>
+		<!-- First Row -->
+		<div class="container">
+			<div class="row">
+				<section id="about" class="col-sm col-lg-8 col-xl-6 bg-light p-1 p-lg-3">
+					<h2 class="p-3 mb-2 text-white bg-secondary">About Me</h2>
+					<picture class="float-right">
+						<img src="images/myImg.jpeg" class="img-fluid img-thumbnail rounded-circle" alt="Responsive My image">
+					</picture>
+					<p>SuperHero Lover! I like Marvel and DC superheros. Check out my favourite MARVEL superheros below!</h3>
+						<h3><i>Superheros</i></h3>
+						<div class="d-flex flex-wrap justify-content-start">
+							<div class="m-2 p-3 bg-dark text-light">IRONMAN</div>
+							<div class="m-2 p-3 bg-dark text-light">Spider-Man</div>
+							<div class="m-2 p-3 bg-dark text-light">Black Panther</div>
+						</div>
+				</section>
+				<section id="movies" class="col-sm col-lg-4 col-xl-6 bg-light p-1 p-lg-3">
+					<h2 class="p-3 mb-2 text-white bg-secondary">My Fav Movies</h2>
+					<table class="table table-striped table-hover">
+						<thead class="thead-dark">
+							<tr>
+								<th>Years</th>
+								<th>Movies</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2002-2019</td>
+								<td>Spider-Man (Tobey Maguire)+(Andrew Garfield)+(Tom Holland)</td>
+							</tr>
+							<tr>
+								<td>2005-2012</td>
+								<td>Batman The Dark Knight Trilogy</td>
+							</tr>
+							<tr>
+								<td>2008-2013</td>
+								<td>Iron Man Trilogy</td>
+							</tr>
+							<tr>
+								<td>2012-2019</td>
+								<td>Avengers Tetralogy</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+
+			</div>
+		</div>
+		<!-- Second Row -->
+		<div class="container">
+			<div class="row">
+
+				<section id="links" class="col-sm col-lg-5 col-xl-4 bg-light p-1 p-lg-3">
+					<h2 class="p-3 mb-2 text-white bg-secondary">LINKS</h2>
+					<ul class="list-group list-unstyled">
+						<li><a class="list-group-item list-group-item-action" href="https://www.google.com/" target="_blank">Google</a></li>
+						<li><a class="list-group-item list-group-item-action" href="https://www.facebook.com/" target="_blank">FaceBook</a></li>
+						<li><a class="list-group-item list-group-item-action" href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+					</ul>
+				</section>
+
+				<section id="rwd" class="col-sm col-lg-7 col-xl-8 bg-light p-1 p-lg-3">
+					<h2 class="p-3 mb-2 text-white bg-secondary">Response Web Design</h2>
+					<p>
+						I hope this webpage can achieve the below
+						<span class="badge badge-pill badge-light">Design Fields!</span>
+					</p>
+					<ul class="text-grey">
+						<li>Auto fit header image✅</li>
+						<li>Different image depending on screen width✅</li>
+						<li>Flexbox with the "hobbies" auto reflow✅</li>
+						<li>Different margin for sections with screen width✅</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer id="footer" class="text-md-right text-light bg-dark p-2 mt-sm-3">
+			This website was built on <time>2020-02-09</time>. <b> © Wing Ho Tang</b>
+		</footer>
+	</article>
+	<!-- BootStrap Script -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<!-- JS script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
